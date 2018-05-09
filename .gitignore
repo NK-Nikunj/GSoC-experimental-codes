@@ -1,2 +1,4 @@
 # Ignoring executables
 /normal_code/as_header/execution_*
+/normal_code/as_so/execution_*
+/normal_code/as_so/hooking_part_*

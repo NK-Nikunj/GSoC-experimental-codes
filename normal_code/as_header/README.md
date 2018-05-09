@@ -1,6 +1,6 @@
 # Implementation as a Header
 
-This folder contains the experimental code for the implementation of my GSoC
+This directory contains the experimental code for the implementation of my GSoC
 Project.
 
 The code above is meant to alter the working of an executable by changing the
