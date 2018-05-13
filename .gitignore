@@ -2,3 +2,10 @@
 /normal_code/as_header/execution_*
 /normal_code/as_so/execution_*
 /normal_code/as_so/hooking_part_*
+/hpx_code/as_header/hpx_execution_gcc
+
+# Ignoring cmake generated files
+/hpx_code/as_header/CMakeFiles/
+/hpx_code/as_header/CMakeCache.txt
+/hpx_code/as_header/cmake_install.cmake
+/hpx_code/as_header/Makefile
