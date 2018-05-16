@@ -3,6 +3,9 @@
 //  Distributed under the Boost Software License, Version 1.0. (See accompanying
 //  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
+# ifndef INITIALIZE_HPX
+#define INITIALIZE_HPX
+
 // Not necessary, but, added for portability purposes
 #define _GNU_SOURCE		
 
@@ -23,11 +26,11 @@ int __argc;
 char** __argv;
 char** __envp;
 
-// hpx_main is the entry point now for sing hpx functionalities
+// hpx_main is the entry point now for using hpx functionality
 // it is now responsible for calling the compiler's main
 int hpx_main(boost::program_options::variables_map& vm)
 {
-	std::cout << "Hpx system has been initialized" << std::endl;
+	std::cout << "HPX system has been initialized" << std::endl;
 	std::cout << "Calling the compiler's main now" << std::endl;
 
 	return actual_main(__argc, __argv, __envp);
@@ -70,3 +73,5 @@ extern "C" int __libc_start_main (
 	return real_start_main(initializing_main, argc, ubp_av, init, fini, rtld_fini, stack_end);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#endif

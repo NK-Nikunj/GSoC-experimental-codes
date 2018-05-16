@@ -27,9 +27,9 @@ $ ./hpx_experiment_2
 
 ### Upgrades
 
-* Now compiler's main is being __invoked__ by the actual pointer to ``int main``. It is done so at the cost of calling _``hpx::init(argc, argv)``_ from our custom implementated main.
+* Now compiler's main is being __invoked__ by the actual pointer to ``int main``. It is done so at the cost of calling _``hpx::init(argc, argv)``_ from our custom implemented main.
 
-* This header will allow for all possible compiler's main, i.e. ``int main()``, ``int main(int argc, char** argv)`` and ``int main(int argc, char** argv, char** argv)`` as opposed to only ``int main(int argc, char** argv)`` from previous experiment.
+* This header will allow for all possible compiler's main, i.e. ``int main()``, ``int main(int argc, char** argv)`` and ``int main(int argc, char** argv, char** envp)`` as opposed to only ``int main(int argc, char** argv)`` from previous experiment.
 
 ### Potential Pitfalls
 
