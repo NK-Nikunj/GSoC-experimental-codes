@@ -3,6 +3,9 @@
 /normal_code/as_so/execution_*
 /normal_code/as_so/hooking_part_*
 /hpx_code/as_header/hpx_execution_gcc
+/normal_code/dl_wrap/static
+/normal_code/dl_wrap/dynamic
+/normal_code/dl_wrap/test.o
 
 # Ignoring cmake generated files
 /hpx_code/as_header/Experiment_1/build/
