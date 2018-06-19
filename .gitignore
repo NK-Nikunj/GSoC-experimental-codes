@@ -6,6 +6,8 @@
 /normal_code/dl_wrap/static
 /normal_code/dl_wrap/dynamic
 /normal_code/dl_wrap/test.o
+/hpx_code/dl_wrap/test.o
+/hpx_code/dl_wrap/dynamic
 
 # Ignoring cmake generated files
 /hpx_code/as_header/Experiment_1/build/
