@@ -1,7 +1,7 @@
 all: main
 
 main: main.cpp.o wrap_libc.cpp.o
-	$(CXX) -Wl,-wrap=__libc_start_main -o main main.cpp.o wrap_libc.cpp.o
+	$(CXX) -Wl,-wrap=main -o main main.cpp.o wrap_libc.cpp.o
 	rm main.cpp.o wrap_libc.cpp.o
 
 main.cpp.o: main.cpp
