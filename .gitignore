@@ -10,6 +10,7 @@
 /hpx_code/dl_wrap/test_1
 /hpx_code/dl_wrap/test_2
 /hpx_code/dl_wrap/test_3
+/powerpc/main
 
 # Ignoring cmake generated files
 /hpx_code/as_header/Experiment_1/build/
