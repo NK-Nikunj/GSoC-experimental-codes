@@ -2,7 +2,7 @@
 
 // This is the actual libc function that we will call from our wrapper function
 extern "C" int __real___libc_start_main (
-				int (*main)(int, char**, char**), int argc, char * * ubp_av,
+				int (*main)(int, char**, char**), int argc, char **argv,
 				void (*init) (void), void (*fini) (void),
 				void (*rtld_fini) (void), void (* stack_end));
 
@@ -18,9 +18,11 @@ int initialize_main(int argc, char** argv, char** envp)
     return actual_main(argc, argv, envp);
 }
 
+int (*custom_main)(int, char**, char**) = &initialize_main;
+
 // Our wrapper for the libc function
 extern "C" int __wrap___libc_start_main (
-				int (*main)(int, char**, char**), int argc, char * * ubp_av,
+				int (*main)(int, char**, char**), int argc, char **argv,
 				void (*init) (void), void (*fini) (void),
 				void (*rtld_fini) (void), void (* stack_end))
 {
@@ -29,5 +31,5 @@ extern "C" int __wrap___libc_start_main (
     actual_main = main;
 
 	// calling original __libc_start_main, but with our custom entry point implementation
-	return __real___libc_start_main(initialize_main, argc, ubp_av, init, fini, rtld_fini, stack_end);
+	return __real___libc_start_main(custom_main, argc, argv, init, fini, rtld_fini, stack_end);
 }
